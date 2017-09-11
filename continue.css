@@ -1,151 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Open\+Sans:100,400,700')
+body {
+	margin: 0;
+	padding: 0;
+}
+.burger-container {
+	position: absolute;
+	width: 100%;
+	height: 99%;
+}
 
-black = #333
-black30 = rgba(#000, 0.3)
-black50 = rgba(#000, 0.5)
-white90 = rgba(#fff, 0.9)
 
-lightblue = #83b6c9
-blue = #418eab
-purple =  #7168b5
+.melting-cheese {
+	position: relative;
+	fill: #f6e7b5;
+}
 
-perspective = 1
 
-pushBack(z)
-  s = 1 + (z * -1) / perspective
-  transform translateZ(unit(z, px)) scale(s)
 
-*,
-*:before,
-*:after
-  margin 0
-  padding 0
-  box-sizing border-box
-
-html
-  font-family 'Open Sans', helvetica, serif
-  font-size 16px
-
-body
-  background white90
-
-a
-  display inline-block
-  color white90
-  text-decoration none
-
-  &:hover
-    background blue
-h1
-  color white90
-  padding 4rem 0
-  font-size 4rem
-  font-weight 700
-  letter-spacing .4rem
-  text-align center
-
-h2
-  padding 0 0 4rem
-  font-size 4rem
-  font-weight 700
-  letter-spacing .4rem
-  text-align center
-  color white90
-  text-shadow 1px 0 2px black30
-  border-bottom 1px dotted black50
-
-.parallax
-  position relative
-  perspective unit(perspective, px)
-  perspective-origin 50% 100%
-  width 100vw
-  height 100vh
-  overflow-x hidden
-  overflow-y auto
-
-.mountains
-  position relative
-  width 100vw
-  height 100vh
-  transform-style preserve-3d
-  z-index -1
-
-.peak, .logo
-  position absolute
-  top 0
-  right 0
-  bottom 0
-  left 0
-  transform-origin 50% 100%
-
-  &.p0
-    pushBack(-40)
-  &.p1
-    pushBack(-25)
-  &.p2
-    pushBack(-15)
-  &.p3
-    pushBack(-8)
-  &.p4
-    pushBack(-5)
-  &.p5
-    pushBack(-4)
-  &.p6
-    pushBack(-3)
-  &.p7
-    pushBack(-2)
-  &.p8
-    pushBack(-1)
-  &.p9
-    pushBack(-0.5)
-
-  img
-    position absolute
-    width 110%
-    height auto
-    left -5%
-    bottom -5%
-
-.overlay
-  position absolute
-  width 100vw
-  height 100vh
-  left 0
-  top 0
-  background linear-gradient(top, purple 0%, blue 50%, lightblue 100%)
-  opacity 0.7
-
-.multiply
-  opacity 1
-  mix-blend-mode overlay
-
-.logo
-  pushBack(-2)
-
-  h1
-    font-size 10rem
-    color black
-    position absolute
-    width 100vw
-    bottom 25vw
-    padding 0
-    text-shadow 0 50px 20px black30
-
-main
-  position relative
-  width 100vw
-  padding 40px
-  background lightblue
-  z-index 2
-
-article
-  max-width 800px
-  margin 0 auto
-
-p
-  color black50
-  font-size 1.2rem
-  max-width 800px
-  line-height 1.6
-  margin-bottom 20px
-  text-align justify
