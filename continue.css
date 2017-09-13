@@ -1,18 +1,132 @@
+@import "bourbon";
+@import "neat";
+
+$base-duration: 500ms;
+
+// Colors
+$color-1: #2c3e50;
+$color-2: #3498db;
+$color-3: #2ecc71;
+
+// Breakpoints
+$sm: new-breakpoint(min-width 320px);
+$med: new-breakpoint(min-width 768px);
+$lg: new-breakpoint(min-width 1024px);
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	outline: none;
+}
+
+.codepen {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: 0px;
+	right: 0px;
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	border-radius: 5px 0 0 0;
+	box-shadow: 0 0 15px rgba(black,0.3);
+	color: white;
+	font-size: 24px;
+	text-decoration: none;
+	z-index: 999;
+}
+
+html {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	font-smooth: auto;
+	font-weight: 300;
+	line-height: 1.5;
+	color: #444;
+}
+
 body {
-	margin: 0;
-	padding: 0;
-}
-.burger-container {
-	position: absolute;
-	width: 100%;
-	height: 99%;
-}
-
-
-.melting-cheese {
 	position: relative;
-	fill: #f6e7b5;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background-color: #f5f5f5;
 }
 
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+}
 
+header {
+	position: relative;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 0;
+	
+	h1 {
+		position: absolute;
+		bottom: -51px;
+		left: -4px;
+		color: white;
+		font-size: 48px;
+		font-weight: 100;
+		text-transform: uppercase;
+		z-index: 9;
+	}
+	
+	.mountains {
+		position: absolute;
+		display: block;
+		bottom: -5px;
+		width: 100%;
+		height: 100vh;
+		z-index: 0;
+		
+		.one, .two, .three, .four, .five {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-position: bottom center;
+			background-repeat: no-repeat;
+			background-size: 105%;
+		}
 
+		.one {
+			background-image: url('http://mentalsociety.com/wp-content/themes/twentyseventeen/assets/images/mountains-1.svg');
+			z-index: 0;
+		}
+
+		.two {
+			background-image: url('http://mentalsociety.com/wp-content/themes/twentyseventeen/assets/images/mountains-2.svg');
+			z-index: -1;
+		}
+		
+		.three {
+			background-image: url('http://mentalsociety.com/wp-content/themes/twentyseventeen/assets/images/mountains-3.svg');
+			z-index: -2;
+		}
+		.four {
+			background-image: url('http://mentalsociety.com/wp-content/themes/twentyseventeen/assets/images/mountains-4.svg');
+			z-index: -3;
+		}
+		
+		.five {
+			background-image: url('http://mentalsociety.com/wp-content/themes/twentyseventeen/assets/images/mountains-5.svg');
+			z-index: -4;
+		}
+	}
+}
+
+section {
+	padding: 50px 0;
+}
